@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+
+#body {
+	margin-left: 50px;
+	
+	
+	
+	
+}
+	.service{
+		background-color:peru;
+		color:firebrick;
+		padding: 15px;
+		margin: 10px;
+		border-radius: 5px;
+	}
+	
+	
+	#carousel { 
+	display:block;
+	
+	}
+	
+	@media screen and (max-width:300px)
+	{
+		#carousel {
+			display: none; 
+		}
+	}
+	
+		
+		
+		
+		
+		
+	#footerWrap{
+		background-color: darkslategrey;
+		padding: 40px 0;
+		margin-top: 40px;	}
+	#footerWrap p { 
+	color:darkgray;}
+
+
+
+
+
+
+
+
+		
+	

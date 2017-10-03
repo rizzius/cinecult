@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<title>Newsletter</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="widht=device-widht, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="stilecss.css">
+
+	
+</head>
+
+<body>
+<div id="headerWrap" class="wrap">
+ <nav id="mainNav" class="navbar navbar-inverse" role="navigation">
+     <div class="container-fluid">
+	 <!--logo-->
+	 <div class="navbar-header">
+	 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+	 <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+	 <span class="icon-bar"></span>
+	 </button>
+	 <a href="home_cinecult.php" class="navbar-brand">CINECULT</a>
+	 </div>
+	 <div class="collapse navbar-collapse" id="mainNavBar">
+        <ul class="nav navbar-nav">
+	         <li class="active"><a href="home_cinecult.php">Home</a></li>
+  
+
+	  <li>
+	 <a href="DVDphp.php">Dvd</a>
+     </li>	
+	 <li><a href="newsletter.html">Newsletter</a></li>
+	 <li><a href="carrello.php">Carrello</a></li>
+	 <li><a href="about_us.html">About us</a></li>
+  
+	    </ul>
+	    
+	    <form class="navbar-form navbar-right" role="search">
+	    	<div class="form-group">
+	    	  <input type="text" class="form-control" placeholder="Cerca nel sito">
+			</div>
+	    </form>
+	 
+	 <ul class="nav navbar-nav navbar-right">
+	 <li><a href="login.html">Login</a></li>
+	 </ul>
+	 
+	 	 
+     </div>
+	 
+	 
+	 
+	 </div>
+</nav>
+	</div>
+<div class="container">
+<h3>Pannello di registrazione utente</h3>
+
+
+<form action="" class="form-group" onSubmit="return controllacampi();" name="iscriviti" method="post">
+    
+    <div class="form-group">
+    <label for="nome">Nome*:</label>
+    <input class="form-control" type="text" id="nome" title="nome" size="20" onFocus="
+    if(this.value=='Inserisci il tuo nome')this.value=''"
+    onBlur="
+    if(this.value=='')this.value='Inserisci il tuo nome'
+    "
+    value="Inserisci il tuo nome">
+	</div>
+ 
+    
+    <br>
+	<br>
+  
+  
+   <div class="form-group">
+     <label for="cognome">Cognome*:</label>
+   
+    <input type="text" id="cognome" class="form-control" title="cognome" size="20" onFocus="
+    if(this.value=='Inserisci il tuo cognome')this.value=''"
+    onBlur="
+    if(this.value=='')this.value='Inserisci il tuo cognome'
+    "
+    value="Inserisci il tuo cognome">
+	</div>
+   
+    <br>
+	<br>
+    
+  
+     <div class="form-group">
+     <label for="email">E-mail*:</label>
+    
+    <input type="email" id="email" class="form-control" title="email" size="20" onFocus="
+    if(this.value=='Inserisci la tua email')this.value=''"
+    onBlur="
+    if(this.value=='')this.value='Inserisci la tua email'
+    "
+    value="Inserisci la tua email">
+	</div>
+    
+ 
+
+ <br>
+ <br>
+ 
+    <div class="form-group" id="box_password" >
+    <label for="pwd">Nuova Password*:</label>
+   <input type="password" id="pwd" class="form-control" required title="pwd" size="20"
+    onFocus="
+    if(this.value=='')this.value=''"
+    onBlur="
+    if(this.value=='')this.value=''
+    "
+    value="">
+    </div>
+   
+  
+  <br>
+  <br>
+  
+   <div class="form-group">
+   <label for="confermapwd">Conferma Password*:</label>
+   <input type="password" id="confermapwd" class="form-control" required title="confermapwd" size="20"
+    onFocus="
+    if(this.value=='')this.value=''"
+    onBlur="
+    if(this.value=='')this.value=''
+    "
+    value="">
+     </div>
+  
+      <br>
+	  <br>
+   <div class="form-group">
+   <input type="submit" class="btn btn-default" id="submit" value="invio" onclick="if (controllacampi())controlla(); return false;">
+   <br>
+   <button onClick="pulisci();">Pulisci i campi</button>
+        
+    <br><br><p id="scritta_campiobbligatori">*Campi obbligatori.</p>
+    
+  
+
+    
+    
+    </div>
+    
+	
+   
+    </form>
+    </div>
+
+   
+      
+	
+    
+        
+		 
+
+<div id="footerWrap">
+	<footer class="container">
+		<p class="text-center">Copyright &copy; 2017 <br> Via Genova 91/32 <br> Tel:011-9042040 <br> E-mail: cinecult@info.it</p>
+	</footer>
+</div>
+</body>
+</html>

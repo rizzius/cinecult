@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<title>Login</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="widht=device-widht, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	
+	<link rel="stylesheet" href="stilecss.css">
+	
+</head>
+
+<body>
+<div id="headerWrap" class="wrap">
+ <nav id="mainNav" class="navbar navbar-inverse" role="navigation">
+     <div class="container-fluid">
+	 <!--logo-->
+	 <div class="navbar-header">
+	 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+	 <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+	 <span class="icon-bar"></span>
+	 </button>
+	 <a href="#" class="navbar-brand">CINECULT</a>
+	 </div>
+	 <div class="collapse navbar-collapse" id="mainNavBar">
+        <ul class="nav navbar-nav">
+	         <li class="active"><a href="home_cinecult.html">Home</a></li>
+  
+	 
+	 <li>
+	 <a href="DVDphp.php">Dvd</a>
+     </li>	
+	 <li><a href="newsletter.html">Newsletter</a></li>
+	 <li><a href="carrello.php">Carrello</a></li>
+	 <li><a href="about_us.html">About us</a></li>
+	    </ul>
+	    
+	    <form class="navbar-form navbar-right" role="search">
+	    	<div class="form-group">
+	    	  <input type="text" class="form-control" placeholder="Cerca nel sito">
+			</div>
+	    </form>
+	 
+	 <ul class="nav navbar-nav navbar-right">
+	 <li><a href="login.php">Login</a></li>
+	 </ul>
+	 
+	 	 
+     </div>
+	 
+	 
+	 
+	 </div>
+</nav>
+	</div>
+	
+	
+
+	
+	<div class="container">
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4">
+		<div class="col-md-12">
+		 <h2 class="text-center">Cine Cult</h2>
+		 </div>
+			<div class="jumbotron" style="margin-top:120px ">
+			
+			<h3>Pagina di Login</h3>
+			<br>
+				<form action = "login.php" method="POST">
+					<div class="form-group">
+					    <label for="username"> Username</label>
+						<input type="text" name="username" class="form-control" placeholder="Inserisci username">
+					</div>
+					
+		<div class="form-group">
+					    <label for="password">Password</label>
+						<input type="password" name="pwd" class="form-control" placeholder="Inserisci password">
+					</div>			
+		
+		
+		<div class="checkbox">
+	    <label> 
+	    <input type="checkbox">
+	    Ricordami
+	    </label>
+		 </div>
+		 
+		 
+  <button type="submit" class="btn btn-primary form-control" value="login">Login</button>
+  
+  
+  
+  
+  <?php
+		    $codiceErrore = $_REQUEST["errore"];
+			if ($codiceErrore==1)
+				$messaggio = "Utente non registrato";
+			else 
+				if ($codiceErrore==2)
+			        $messaggio ="Password errata";
+				else
+					$messaggio = "";
+			echo "<script type='text/javascript'>";
+			echo "$('#messaggioErrore').append ('$messaggio');";
+			
+			echo "</script>"; 
+			
+				
+		?>
+	
+ 
+		 
+				</form>
+			</div>
+		</div>
+		
+		
+		
+	</div>
+	
+	
+	<div id="content">
+<div class="row" id="services">
+	<h4 class="text-center">Non sei registrato? <br> Clicca <a href="registrazione.html">qui</a> e compila il modulo di registrazione</h4>
+	<div class="col-md-6 text-center">
+	</div>
+	
+</div>
+
+	
+</div>
+	
+	
+	
+	<div id="footerWrap">
+	<footer class="container">
+		<p class="text-center">Copyright &copy; 2017 <br> Via Genova 91/32 <br> Tel:011-9042040 <br> E-mail: cinecult@info.it</p>
+	</footer>
+</div>
+</body>
+</html>
