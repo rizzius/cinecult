@@ -5,9 +5,9 @@
         session_start();
 
         if (isset($_SESSION["carrello"])) {
-          $carrello=$_SESSION["carrello"]." ".$_REQUEST["id"];
+          $carrello=$_SESSION["carrello"]." ".$_REQUEST["id_prodotto"];
         } else {
-          $carrello=$_REQUEST["id"];
+          $carrello=$_REQUEST["id_prodotto"];
         }
 
         $_SESSION["carrello"]=$carrello;

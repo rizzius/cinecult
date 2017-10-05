@@ -1,19 +1,19 @@
 <?php
 
-
+//pagina per scrivere sul db una 
 
 $username = $_POST["username"];
-$pwd = $_POST["pwd"];
+$pass = $_POST["pwd"];
   
 $servername = "localhost";
 $usernameDB = "root";
-$pwd = "root";
+$pwd= "root";
 $db ="cine_cult";
 
 
  	
  
-  $conn = mysqli_connect ($servername, $usernameDB, $pwd);
+  $conn = mysqli_connect ($servername, $usernameDB, $pwddb);
   if (!$conn)
 	  die ("Errore nella connessione al $servername");
  $seldb = mysqli_select_db ($conn,$db);
@@ -21,7 +21,7 @@ $db ="cine_cult";
 	  die ("Errore nella connessione all'archivio $db");
   
   
-  $query = "INSERT INTO utenti (username,password) VALUES ('$username', '$pwd')";
+  $query = "INSERT INTO utenti (username,pwd) VALUES ('$username', '$pwd')";
   
   $result = mysqli_query ($conn, $query);
   if (!$result)
@@ -30,4 +30,5 @@ $db ="cine_cult";
   
   header('Location: home_cinecult.php');
   exit ();
+
 ?>

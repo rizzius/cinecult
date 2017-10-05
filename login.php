@@ -1,52 +1,43 @@
+
+
+
 <?php
 
-  $user = $_REQUEST["username"];
-  $password = $_REQUEST["password"];
-  
-  
-  $servername = "localhost";
-  $username = "root";
-  $pwdserver = "";
-  $dbname = "cine_cult";
-  
+
+
+include "per_login.php";
+
+//ottengo i dati del form//
+$username = $_POST['username'];
+$pwd = $_POST ['pwd'];
+
+
+
+ 	
  
-  $conn = mysqli_connect ($servername, $username, $pwdserver);
+  $conn = mysqli_connect ("localhost", "root", "root");
+
   if (!$conn)
-	  die ("Errore nella connessione al $servername");
-
- $seldb = mysqli_select_db ($conn,$dbname);
+	  die ("Errore nella connessione al server");
+ $seldb = mysqli_select_db ($conn,"cine_cult");
   if (!$seldb)
-	  die ("Errore nella connessione all'archivio $dbname");
+	  die ("Errore nella connessione all'archivio ");
   
-  $query = "SELECT * FROM utenti WHERE username='$user'";
+//controllo l'esistenza della coppia
+$sql = "SELECT * FROM utenti WHERE username=='$username' and pwd == '$pass'";
+$risultati= mysqli_query($sql);
+$numero= mysqli_num_rows($risultati);
 
-  $result =mysqli_query($conn,$query);
-  if (!$result)
-	  die ("Errore nell'accesso: $query");
-  
-  $numero_tuple = mysqli_num_rows ($result);
-  if ($numero_tuple==0) {
+//notifico il login/login fallito
 
-       header('Location: home_cinecult.php?errore=1');
-	   exit ();
-  }
-  
-  $query = "SELECT password FROM utenti WHERE username='$user'";
-  $result = mysqli_query($conn,$query);
-  if (!$result)
-	  die ("Errore nell'accesso: $query");
-  $tupla = mysqli_fetch_array($result);
-  $password_corretta = $tupla["password"];
-  
-  if($password!=$password_corretta){
-	  header ('Location: home_cinecult.php?errore=2');
-	  exit();
-  }
-  else{
-	  header('Location: home_cinecult.php');
-	  exit();
-  }
-  
-  mysqli_close($conn);
-  
+if ($numero > 0) {
+	echo "Login effettuato con successo";
+	
+} else {
+	
+	echo "Login fallito";
+	
+}
+	
+
 ?>

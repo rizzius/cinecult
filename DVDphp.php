@@ -33,19 +33,13 @@
   
 	
 	 <li>
-	 <a href="DVDphp.php">Dvd</a>
-     </li>	
-	 <li><a href="newsletter.html">Newsletter</a></li>
+	 <a href="DVDphp.php">Dvd</a></li>	
 	 <li><a href="carrello.php">Carrello</a></li>
 	 <li><a href="about_us.html">About us</a></li>
   
 	    </ul>
 	    
-	          <form class="navbar-form navbar-right" role="search">
-	    	      <div class="form-group">
-	    	          <input type="text" class="form-control" placeholder="Cerca nel sito">
-			     </div>
-	           </form>
+	          
 	 
 	 <ul class="nav navbar-nav navbar-right">
 	         <li><a href="login.html">Login</a></li>
@@ -58,6 +52,9 @@
 </nav>
 	</div>
 	
+	
+	
+	
 	<?php
 	
    
@@ -68,7 +65,6 @@
 
    $query_prodotti = "SELECT * FROM prodotti";
 
-   $query_commenti ="SELECT * FROM commenti,prodotti where commenti.id_prodotto=prodotti.id order by commenti.id desc limit 4"
 
    ?>
 	
@@ -102,10 +98,10 @@
           echo "<img style='width: 50%;' src='http://localhost:8888/cinecult/img/".$immagine."' />";
           //echo "<p>".$immagine."<p/>";
                 //echo "<a href='dettaglio_prodotto.php?id=$id'><img class='img-thumbnail prodotto' src='images/prodotti/$immagine' alt=''/></a>";
-          echo "<h5><a href='dettaglio_ordini.php?id=$id'>$titolo - $regia</a></h5>";
+          echo "<h5><a href='carrello.php?id_prodotto=$id_prodotto'>$titolo - $regia</a></h5>";
           echo "<p>$descrizione";
           echo " <span class='badge badge-success'>EUR $prezzo</span>";
-          echo "<a href='aggiungicarrello.php?id=$id'><span class='glyphicon glyphicon-shopping-cart' aria-hidden='true'></span></a>";
+          echo "<a href='aggiungicarrello.php?id_prodotto=$id_prodotto'><span class='glyphicon glyphicon-shopping-cart' aria-hidden='true'></span></a>";
           echo "</p>";
           echo "</article>";
           echo "</div>";

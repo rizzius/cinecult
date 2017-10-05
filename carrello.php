@@ -30,20 +30,16 @@
         <ul class="nav navbar-nav">
 	         <li class="active"><a href="home_cinecult.php">Home</a></li>
   
-	 <!--dropdownmenu-->
-	 <li class="dropdown">
+	 
+	 <li>
 	 <a href="DVDphp.php">Dvd</a>
      </li>	
-	 <li><a href="newsletter.html">Newsletter</a></li>
+	 
 	 <li><a href="carrello.php">Carrello</a></li>
 	 <li><a href="about_us.html">About us</a></li>
 	    </ul>
 	    
-	    <form class="navbar-form navbar-right" role="search">
-	    	<div class="form-group">
-	    	  <input type="text" class="form-control" placeholder="Cerca nel sito">
-			</div>
-	    </form>
+	    
 	 
 	 <ul class="nav navbar-nav navbar-right">
 	 <li><a href="login.html">Login</a></li>
@@ -76,7 +72,7 @@
   $totale=0;
   if (count($carrello)>0) {
     $carrello_string=implode(",", $carrello);
-    $query_carrello="select * from prodotti where id in ($carrello_string)";
+    $query_carrello="select * from prodotti where id_prodotto in ($carrello_string)";
   }
 
   ?>
@@ -101,7 +97,7 @@
 
               $i=1;
               while ($riga = $risultato->fetch_array()) {
-                $id = $riga["id"];
+                $id_prodotto = $riga["id_prodotto"];
                 $titolo = $riga["titolo"];
                 $regia = $riga["regia"];
 			    $descrizione=$riga["descrizione"];
@@ -110,7 +106,7 @@
 
                 echo "<tr>";
                 echo "<td>$i</td>";
-                echo "<td><a href='dettaglio_prodotto.php?id=$id'>$nome</a></td>";
+                //echo "<td><a href='dettaglio_prodotto.php?id=$id_prodotto'>$titolo</a></td>";
                 echo "<td>$prezzo</td>";
                 echo "</tr>";
 
@@ -118,7 +114,7 @@
               }
               echo "</tbody>";
               echo "</table>";
-              echo "<p>Totale: $totale EUR</p>";
+              echo "<p>Totale:$totale EUR</p>";
               echo "<form action='aggiungiordine.php' method='post'>";
               echo "<input type='hidden' name='totale' value='".$totale."'/>";
               echo "<button class='btn btn-primary' type='submit'>Ordina adesso!</button>";
@@ -130,7 +126,10 @@
             } else {
               echo "<p>Il tuo carrello &egrave; vuoto!</p>";
             }
+	
             ?>
+            
+            
 	<div id="footerWrap">
 	<footer class="container">
 		<p class="text-center">Copyright &copy; 2017 <br> Via Genova 91/32 <br> Tel:011-9042040 <br> E-mail: cinecult@info.it</p>

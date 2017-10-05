@@ -18,20 +18,63 @@
 
 
 	 <script type="text/javascript">
-				  $('document').ready(function(){
-                  $('#nascondi1').bind('click', nascondi1);
-			      $('#nascondi2').bind('click', nascondi2);
+		  $('document').ready(function(){
+	    $('#mostra1').bind('click', mostra1);
+		 $('#nascondi1').bind('click', nascondi1);
+		  $('#mostra2').bind('click', mostra2);
+		 $('#nascondi2').bind('click', nascondi2);
+		  $('#mostra3').bind('click', mostra3);
+		 $('#nascondi3').bind('click', nascondi3);
+		 $('#mostra4').bind('click', mostra4);
+		 $('#nascondi4').bind('click', nascondi4);
+       
+       
+			
 			
 			
 	    function nascondi1() {
-			$('#recensione1').slideUp();
-		}
-					  
-					    function nascondi2() {
-			$('#recensione2').slideUp();
-		}
+			$('#recensione1').slideUp(1000);
+			
+			}
+		
+			
+			 function mostra1() {
+			$('#recensione1').slideDown();
+			}
 
-});
+
+	 function nascondi2() {
+			$('#recensione2').slideUp(1000);
+			
+			}
+		
+			
+			 function mostra2() {
+			$('#recensione2').slideDown();
+			}
+
+
+		function nascondi3() {
+			$('#recensione3').slideUp(1000);
+			
+			}
+		
+			
+			 function mostra3() {
+			$('#recensione3').slideDown();
+			}
+
+		function nascondi4() {
+			$('#recensione4').slideUp(1000);
+			
+			}
+		
+			
+			 function mostra4() {
+			$('#recensione4').slideDown();
+			}					
+});			
+
 		</script>
 </head>
 
@@ -52,21 +95,15 @@
         <ul class="nav navbar-nav">
 	         <li class="active"><a href="home_cinecult.php">Home</a></li>
   
-	 <!--dropdownmenu-->
-	 <li class="dropdown">
-	 <a href="DVDphp.php">Dvd</a>
-     </li>	
-	 <li><a href="newsletter.html">Newsletter</a></li>
-	 <li><a href="carrello.html">Carrello</a></li>
+	 
+	 <li><a href="DVDphp.php">Dvd</a></li>	
+	 
+	 <li><a href="carrello.php">Carrello</a></li>
 	 <li><a href="about_us.html">About us</a></li>
   
 	    </ul>
 	    
-	    <form class="navbar-form navbar-right" role="search">
-	    	<div class="form-group">
-	    	  <input type="text" class="form-control" placeholder="Cerca nel sito">
-			</div>
-	    </form>
+	  
 	 
 	 <ul class="nav navbar-nav navbar-right">
 	 <li><a href="login.html">Login</a></li>
@@ -85,13 +122,13 @@
 			
 			
 			
-	<div id="container-fluid">
+	<div class="container-fluid">
 		<div class="row" id="articles">
 			<h2 class="text-center">Recensioni degli utenti</h2>
 		</div>
 	   
 	<div class="row" id="feedback">
-		  <h3 class="text-center">Scorri con il cursore sopra un'immagine e leggi la trama del film</h3>	
+	
 		  
 		  
 		  
@@ -100,17 +137,29 @@
 		  
 			  <div class="col-xs-3"> 
 			  <h3 class="text-center">Apocalipse Now</h3>
-			  <img class="img-responsive img-thumbnail" src="img/apocalipse_now.jpg">
+			  <img class="img-responsive img-thumbnail" src="img/apocalipsenow.jpg">
            
               <br>
 			   <p>Regia: Francis Ford Coppola <br> Anno: 1979 </p>
-			  <p id="recensione1"></p>
-			 <script>
-				  function myFunction() {
-				  document.getElementById("recensione1").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-				  }
-			 </script>
+			   
+			   <div id="recensione1">
+			<p> Un film bellissimo, lo consiglio a tutti. Mi ha cambiato la vita. Marlon Brando è un attore magnifico, ha amato ogni sua inquadratura.</p>
 			</div>
+			   
+			  
+			   
+			   
+			 
+			
+			<input type="button" id="mostra1" value="Mostra recensione">
+            <input type="button" id="nascondi1" value="Nascondi recensione">
+			
+			 </div>
+			
+			
+			
+		
+
 			
 			
 			
@@ -123,64 +172,72 @@
            
               <br>
 			   <p>Regia: Oliver Stone <br> Anno: 1979 </p>
-			  <p id="recensione2"></p>
-			 <script>
-				  function myFunction() {
-				  document.getElementById("recensione2").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-				  }
-			 </script>
+			    <div id="recensione2">
+			<p> Grandioso, comprato e rivisto ieri sera. Il cinema di guerra come non l'avete mai visto. Da collezione!</p>
+			</div>
+			   
+			  
+			   
+			   
+			 
 			
+			<input type="button" id="mostra2" value="Mostra recensione">
+            <input type="button" id="nascondi2" value="Nascondi recensione">
+			
+			
+			 
 			</div>
 			
+			<div class="col-xs-3">
+			
+			  <h3 class="text-center">C'era una volta in America</h3>
+			  <img class="img-responsive img-thumbnail" src="img/ceraunavoltainamerica.jpg">
+           
+              <br>
+			   <p>Regia: Oliver Stone <br> Anno: 1984 </p>
+			    <div id="recensione3">
+			<p> Che dire, il miglior film di Sergio Leone, con un Robert De Nito perfetto. Amo il suo personaggio da sempre, uno dei milgiori della storia del cinema.</p>
+			</div>
+			   
+			  
+			   
+			   
+			 
+			
+			<input type="button" id="mostra3" value="Mostra recensione">
+            <input type="button" id="nascondi3" value="Nascondi recensione">
 			
 			
+			 
+			</div>
+			
+			<div class="col-xs-3">
+			
+			  <h3 class="text-center">Taxi Driver</h3>
+			  <img class="img-responsive img-thumbnail" src="img/taxidriver.jpg">
+           
+              <br>
+			   <p>Regia: Martin Scorsese <br> Anno: 1976 </p>
+			    <div id="recensione4">
+			<p> Ricordiamoci che questo film ha vinto l'Oscar. Ogni appassionato di cinema dovrebbe averlo nella propria teca. Imperdibile. Grandi CineCult!!!</p>
+			</div>
+			   
+			  
+			   
+			   
+			 
+			
+			<input type="button" id="mostra4" value="Mostra recensione">
+            <input type="button" id="nascondi4" value="Nascondi recensione">
 			
 			
-			
-			
-			
-			
- 	   
- 	  			      	    
+			 
+			</div>
+					      	    
  	  	</div>
+
 	
-	</div>		
-	 <button onclick="myFunction()">Leggi recensione</button>
-	 <input type="button" id="nascondi1" value="Nascondi Recensione">	
-		           
-	              
-	  <button onclick="myFunction()">Leggi recensione</button>
-	 <input type="button" id="nascondi2" value="Nascondi Recensione">	          
-	              
-	              
-	              
-	              
-		              
- <div class="container-fluid"> 
-   <div class="form-group">
-    <label for="username">Insierisci qui il tuo nome:<input class="form-control" type="text" name="username" required maxlength="20"></label>
 	</div>
-	
-		
-			
-			
-		<form>
-			Inserisci qui la tua recensione: <br> <textarea name="commento"></textarea>	
-			<br>
-			<input type="submit" value="invia recensione"/>		
-			
-		</form>
-		
-</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

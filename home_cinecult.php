@@ -15,19 +15,21 @@
 <script type="text/javascript">
 	
         $('document').ready(function(){
-	    $('#mostra').read('click', mostra);
+	    $('#mostra').bind('click', mostra);
+		 $('#nascondi').bind('click', nascondi);
+       
        
 			
 			
 			
 	    function nascondi() {
-			$('#carousel').slideUp();
+			$('#carousel').slideUp(1000);
 			
 			}
 		
 			
 			 function mostra() {
-			$('#carousel').show();
+			$('#carousel').slideDown();
 			}
 		
 
@@ -67,16 +69,12 @@
 	  <li>
 	 <a href="DVDphp.php">Dvd</a>
      </li>	
-	 <li><a href="newsletter.html">Newsletter</a></li>
+	 
 	 <li><a href="carrello.php">Carrello</a></li>
 	 <li><a href="about_us.html">About us</a></li>
 	    </ul>
 	    
-	    <form class="navbar-form navbar-right" role="search">
-	    	<div class="form-group">
-	    	  <input type="text" class="form-control" placeholder="Cerca nel sito">
-			</div>
-	    </form>
+	   
 	 
 	 <ul class="nav navbar-nav navbar-right">
 	 <li><a href="login.html">Login</a></li>

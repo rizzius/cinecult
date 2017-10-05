@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<title>About_us</title>
+<title>Login</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="widht=device-widht, initial-scale=1">
@@ -9,10 +9,10 @@
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 	
 	<link rel="stylesheet" href="stilecss.css">
 	
-
 </head>
 
 <body>
@@ -26,24 +26,25 @@
      <span class="icon-bar"></span>
 	 <span class="icon-bar"></span>
 	 </button>
-	 <a href="home_cinecult.php" class="navbar-brand">CINECULT</a>
+	 <a href="#" class="navbar-brand">CINECULT</a>
 	 </div>
 	 <div class="collapse navbar-collapse" id="mainNavBar">
         <ul class="nav navbar-nav">
 	         <li class="active"><a href="home_cinecult.php">Home</a></li>
   
+	 
 	 <li>
 	 <a href="DVDphp.php">Dvd</a>
      </li>	
-	 
+	
 	 <li><a href="carrello.php">Carrello</a></li>
+			
 	 <li><a href="about_us.html">About us</a></li>
 	    </ul>
-	    
-	   
+	 
 	 
 	 <ul class="nav navbar-nav navbar-right">
-	 <li><a href="login.html">Login</a></li>
+	 <li><a href="login.php">Login</a></li>
 	 </ul>
 	 
 	 	 
@@ -56,74 +57,59 @@
 	</div>
 	
 	
-	<div class="container-fluid">
-		<h2>Contatti</h2>
-		<table class="table" >
-			<thead>
-				<tr>
-					<th>Nome</th>
-					<th>Cognome</th>
-					<th>E-mail:</th>
-				</tr>
-				
-				
-				</thead>
+
+	
+	<div class="container">
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4">
+		<div class="col-md-12">
+		 <h2 class="text-center">Cine Cult</h2>
+		 </div>
+			<div class="jumbotron" style="margin-top:120px ">
 			
-			
-			<tbody>
-			<tr>
-			        <td>Niccolò</td>
-					<td>Rizzo</td>
-					<td>rizzonicco@gmail.com</td>
-			</tr>
-			
-			<tr>
-			        <td>Francesco</td>
-					<td>Lodato</td>
-					<td>fralodato@gmail.com</td>
-			</tr>
-			
-			
-			</tbody>
-			
-		</table>
+			<h3>Pagina di Login</h3>
+			<br>
+				<form action = "login.php" method="POST">
+					<div class="form-group">
+					    <label for="username"> Username</label>
+						<input type="text" name="username" class="form-control" placeholder="Inserisci username">
+					</div>
+					
+		<div class="form-group">
+					    <label for="password">Password</label>
+						<input type="password" name="pwd" class="form-control" placeholder="Inserisci password">
+					</div>			
 		
-		<table class="table" >
-			<thead>
-				<tr>
-					<th>Ufficio</th>
-					<th>Tel:</th>
-					<th>E-mail:</th>
-				</tr>
-				
-				
-				</thead>
-			
-			
-			<tbody>
-			<tr>
-			        <td>via Roma 111 Milano</td>
-					<td>041433366</td>
-					<td>cinecult.info@gmail.com</td>
-			</tr>
-			
-			<tr>
-			        <td>via Genova 91 Torino</td>
-					<td>011042040</td>
-					<td>cinecultresi@gmail.com</td>
-			</tr>
-			
-			
-			</tbody>
-			
-		</table>
+		
+		<div class="checkbox">
+	    <label> 
+	    <input type="checkbox">
+	    Ricordami
+	    </label>
+		 </div>
+		 
+		 
+  <button type="submit" class="btn btn-primary form-control" value="login">Login</button>
+		 
+				</form>
+			</div>
+		</div>
 		
 		
 		
 	</div>
 	
 	
+	<div id="content">
+<div class="row" id="services">
+	<h4 class="text-center">Non sei registrato? <br> Clicca <a href="registrazione.html">qui</a> e compila il modulo di registrazione</h4>
+	<div class="col-md-6 text-center">
+	</div>
 	
+</div>
+
+	
+</div>
 	
 	
 	
